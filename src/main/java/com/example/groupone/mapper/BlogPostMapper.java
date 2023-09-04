@@ -13,6 +13,7 @@ public class BlogPostMapper {
         dto.setId(entity.getId());
         dto.setTitle(entity.getTitle());
         dto.setContent(entity.getContent());
+        dto.setPublicationDate(entity.getPublicationDate());
         return dto;
     }
 
@@ -21,6 +22,7 @@ public class BlogPostMapper {
         entity.setId(dto.getId());
         entity.setTitle(dto.getTitle());
         entity.setContent(dto.getContent());
+        entity.setPublicationDate(dto.getPublicationDate());
         return entity;
     }
 }

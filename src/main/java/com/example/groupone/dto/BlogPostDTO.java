@@ -2,11 +2,12 @@ package com.example.groupone.dto;
 
 import java.util.Date;
 
-public class BlogPostDTO {
+    public class BlogPostDTO {
 	   private Long id;
 	   private String title;
 	   private String content;
 	   private Date publicationDate;
+	
 	public Long getId() {
 		return id;
 	}

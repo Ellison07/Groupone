@@ -4,13 +4,22 @@ import java.util.Date;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name="Blogpost")
 public class BlogPost {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
-   private String title;
-   private String content;
-   private Date publicationDate;
+	
+	@Column(name="id")
+    private Long id;
+	
+	@Column(name="title")
+    private String title;
+	
+	@Column(name="content")
+    private String content;
+	
+	@Column(name="publicationdate")
+    private Date publicationDate;
    
 
 public Long getId() {
@@ -59,13 +68,11 @@ public BlogPost(Long id, String title, String content, Date publicationDate) {
 	this.publicationDate = publicationDate;
 }
 
-
 @Override
 public String toString() {
 	return "BlogPost [id=" + id + ", title=" + title + ", content=" + content + ", publicationDate=" + publicationDate
 			+ "]";
 }
-
 
 public BlogPost() {
 	super();
